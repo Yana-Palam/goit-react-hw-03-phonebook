@@ -7,6 +7,10 @@ import Button from 'components/Button';
 class ContactForm extends Component {
   state = { name: '', number: '' };
 
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
+
   handleChange = e => {
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
